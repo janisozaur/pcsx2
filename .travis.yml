@@ -27,9 +27,11 @@ before_install:
 
 before_script:
   - ./travis.sh before_script
+  - ccache --show-stats
 
 script:
   - ./travis.sh script
+  - ccache --show-stats
 
 after_success:
   - ./travis.sh after_success
